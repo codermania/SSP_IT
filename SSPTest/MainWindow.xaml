@@ -1,0 +1,33 @@
+﻿<Window x:Class="SSPTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SSPTest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="900">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Width="200" Height="40" Click="ButtonBase_OnClick">Connect</Button>
+                <Button x:Name="DisconnectButton" Width="200" Height="40" Margin="10 0 0 0" Click="DisconnectButton_OnClick">Disconnect</Button>
+                <Button x:Name="ResetButton" Width="200" Height="40" Margin="10 0 0 0" Click="ResetButton_OnClick">Reset</Button>
+                <Button x:Name="SyncButton" Width="200" Height="40" Margin="10 0 0 0" Click="SyncButton_OnClick">Sync</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 0">
+                <Button x:Name="SerialButton" Width="200" Height="40" Margin="0 0 0 0" Click="SerialButton_OnClick">Get Serial</Button>
+                <Button x:Name="EnableButton" Width="200" Height="40" Margin="10 0 0 0" Click="EnableButton_OnClick">Enable</Button>
+                <Button x:Name="DisableButton" Width="200" Height="40" Margin="10 0 0 0" Click="DisableButton_OnClick">Disable</Button>
+                <Button x:Name="PollButton" Width="200" Height="40" Margin="10 0 0 0" Click="PollButton_OnClick">Poll</Button>
+            </StackPanel>
+            <StackPanel Margin="0 10 0 0">
+                <Button x:Name="ChannelButton" Width="200" Height="40" Margin="10 0 0 0" Click="ChannelButton_OnClick">Channel</Button>
+            </StackPanel>
+        </StackPanel>
+        <TextBox x:Name="ResultTextBox" Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"></TextBox>
+    </Grid>
+</Window>
